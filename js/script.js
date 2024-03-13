@@ -21,11 +21,11 @@ createApp({
           done: true,
         },
       ],
-      inputTask:null,
-      newTask:{
-        text: '',
-        done: false,
-      },
+      inputTask:'',
+      // newTask:{
+      //   text: '',
+      //   done: false,
+      // },
       isInputLongEnough:null
     }
   },
@@ -40,8 +40,8 @@ createApp({
     },
     addNewTask(){
       if (this.inputTask.length>=4) {
-        this.newTask.text = this.inputTask;
-        this.toDoList.unshift(this.newTask);
+        const newTask = { text: this.inputTask, done:false };
+        this.toDoList.unshift(newTask);
         console.log(this.toDoList);
         this.inputTask='';
         this.isInputLongEnough=true
