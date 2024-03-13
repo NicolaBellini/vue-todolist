@@ -20,6 +20,9 @@ img{
 .error{
   color: red;
   font-size: .9rem;
+  position: absolute;
+  left: 44.5%;
+  top: 140px;
 }
 
 
