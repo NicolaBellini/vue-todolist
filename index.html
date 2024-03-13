@@ -30,8 +30,8 @@
 
     <div class="new-task">
 
-      <input  placeholder="Nuovo task"type="text">
-      <button >Aggiungi</button>
+      <input  placeholder="Nuovo task"type="text" v-model="newTask" @keyUp.enter="console.log('ciao')">
+      <button @click="console.log('ciao')" >Aggiungi</button>
       <p class="error"></p>
     </div>
 

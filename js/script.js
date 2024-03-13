@@ -21,6 +21,7 @@ createApp({
           done: true,
         },
       ],
+      newTask:'',
     }
   },
 
