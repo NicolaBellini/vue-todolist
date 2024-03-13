@@ -39,7 +39,7 @@
       <ul>
         <li v-for="(task, index) in toDoList">
           <span :class="{'done': task.done}" @click="task.done=!task.done" >{{task.text}}</span>
-          <i class="fa-solid fa-xmark" @click=" removeTask(index)"></i>
+          <i class="fa-solid fa-xmark" @click=" removeTask(task, index)"></i>
         </li>
         <!-- <li>
           <span>task....</span>

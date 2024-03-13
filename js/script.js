@@ -31,8 +31,12 @@ createApp({
   },
 
   methods: {
-    removeTask(index){
-      this.toDoList.splice(index, 1)
+    removeTask(element, index){
+      if(element.done===true){
+        this.toDoList.splice(index, 1)
+      }else{
+        alert('completa la task prima')
+      }
     },
     addNewTask(){
       if (this.inputTask.length>=4) {
@@ -45,7 +49,8 @@ createApp({
         this.isInputLongEnough=false
         this.inputTask='';
       }
-    }
+    },
+ 
   },
 
   mounted() {
