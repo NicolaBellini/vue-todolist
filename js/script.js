@@ -9,18 +9,24 @@ createApp({
           done: true,
         },
         {
-          text:'todo-thing',
+          text:'babbo',
           done: false,
         },
         {
-          text:'todo-thing',
+          text:'luca',
           done: false,
         },
         {
-          text:'todo-thing',
+          text:'quarto',
           done: true,
         },
       ],
+    }
+  },
+
+  methods: {
+    removeTask(index){
+      this.toDoList.splice(index, 1)
     }
   },
 
