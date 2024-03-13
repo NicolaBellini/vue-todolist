@@ -35,7 +35,7 @@ createApp({
       if(element.done===true){
         this.toDoList.splice(index, 1)
       }else{
-        alert('completa la task prima')
+        alert('Completa la task prima.')
       }
     },
     addNewTask(){

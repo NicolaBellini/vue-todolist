@@ -36,26 +36,16 @@
     </div>
 
     <div class="task-container">
-      <ul>
+      <ul v-if="toDoList.length > 0">
         <li v-for="(task, index) in toDoList">
           <span :class="{'done': task.done}" @click="task.done=!task.done" >{{task.text}}</span>
           <i class="fa-solid fa-xmark" @click=" removeTask(task, index)"></i>
         </li>
-        <!-- <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li> -->
-
       </ul>
-
+      <div v-else>
+        <h2>non ci sono task!</h2>
+      </div>
+     
     </div>
 
 
