@@ -35,9 +35,12 @@ createApp({
     },
     addNewTask(){
       if (this.inputTask.length>4) {
-        this.newTask.text = this.inputTask
-        this.toDoList.unshift(this.newTask)
+        this.newTask.text = this.inputTask;
+        this.toDoList.unshift(this.newTask);
         console.log(this.toDoList);
+        this.inputTask='';
+      }else{
+        this.inputTask='';
       }
     }
   },
