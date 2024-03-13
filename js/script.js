@@ -21,13 +21,24 @@ createApp({
           done: true,
         },
       ],
-      newTask:'',
+      inputTask:null,
+      newTask:{
+        text: '',
+        done: false,
+      },
     }
   },
 
   methods: {
     removeTask(index){
       this.toDoList.splice(index, 1)
+    },
+    addNewTask(){
+      if (this.inputTask.length>4) {
+        this.newTask.text = this.inputTask
+        this.toDoList.unshift(this.newTask)
+        console.log(this.toDoList);
+      }
     }
   },
 
