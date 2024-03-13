@@ -26,6 +26,7 @@ createApp({
         text: '',
         done: false,
       },
+      isInputLongEnough:null
     }
   },
 
@@ -34,12 +35,14 @@ createApp({
       this.toDoList.splice(index, 1)
     },
     addNewTask(){
-      if (this.inputTask.length>4) {
+      if (this.inputTask.length>=4) {
         this.newTask.text = this.inputTask;
         this.toDoList.unshift(this.newTask);
         console.log(this.toDoList);
         this.inputTask='';
+        this.isInputLongEnough=true
       }else{
+        this.isInputLongEnough=false
         this.inputTask='';
       }
     }

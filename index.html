@@ -32,7 +32,7 @@
 
       <input  placeholder="Nuovo task"type="text" v-model="inputTask" @keyUp.enter="addNewTask()">
       <button @click="addNewTask()" >Aggiungi</button>
-      <p class="error"></p>
+      <p v-if="isInputLongEnough===false" class="error">La Task è troppo corta per essere un vero compito</p>
     </div>
 
     <div class="task-container">
